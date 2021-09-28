@@ -1,0 +1,9 @@
+Script started on 2021-09-28 19:59:11+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="139" LINES="46"]
+]0;lalit@lalit: ~[01;32mlalit@lalit[00m:[01;34m~[00m$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+]0;lalit@lalit: ~[01;32mlalit@lalit[00m:[01;34m~[00m$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+]0;lalit@lalit: ~[01;32mlalit@lalit[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-09-28 19:59:31+03:00 [COMMAND_EXIT_CODE="0"]
