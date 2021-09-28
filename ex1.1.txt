@@ -1,0 +1,10 @@
+Script started on 2021-09-28 19:47:32+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="139" LINES="24"]
+]0;lalit@lalit: ~[01;32mlalit@lalit[00m:[01;34m~[00m$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                          PORTS     NAMES
+04af2addf7bb   nginx     "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes                    80/tcp    fervent_kare
+d59c45ea54ac   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) About a minute ago             heuristic_lederberg
+9632c2acd558   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) About a minute ago             hardcore_mclean
+]0;lalit@lalit: ~[01;32mlalit@lalit[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-09-28 19:47:58+03:00 [COMMAND_EXIT_CODE="0"]
