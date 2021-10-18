@@ -1,0 +1,34 @@
+## First of all run docker container for ubuntu in detached mode
+
+lalit@lalit:~$ docker run -d -it ubuntu
+44518794dc52d4020e87a3a9caf470dd8928354fd8877ffd77439a6c5253397c
+
+## Then enter inside the container using
+docker exec -it 44 bash
+
+## If the command is given 
+root@44518794dc52:/# echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;
+Input website:
+helsinki.fi
+Searching..
+bash: curl: command not found
+
+## solution is to update package and install curl with following commands
+root@44518794dc52:/# apt update
+........... apt update process..
+root@44518794dc52:/# apt install curl
+...........curl installation process
+
+## Finally 
+root@44518794dc52:/# echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
