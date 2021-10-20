@@ -1,0 +1,42 @@
+## pulling the alpine version
+lalit@lalit:~$ docker pull devopsdockeruh/simple-web-service:alpine
+alpine: Pulling from devopsdockeruh/simple-web-service
+ba3557a56b15: Pull complete 
+1dace236434b: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+docker.io/devopsdockeruh/simple-web-service:alpine
+
+lalit@lalit:~$ docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
+ubuntu                              latest    ba6acccedd29   4 days ago     72.8MB
+fav_distro                          bionic    5a214d77f5d7   2 weeks ago    63.1MB
+ubuntu                              18.04     5a214d77f5d7   2 weeks ago    63.1MB
+ubuntu                              <none>    fb52e22af1b0   7 weeks ago    72.8MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   7 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   7 months ago   15.7MB
+
+The size of alpine version is significantly smaller. (5.5 times less)
+
+## Running container in detached interactive mode 
+lalit@lalit:~$ docker run -d -it devopsdockeruh/simple-web-service:alpine 
+c256c6f43920d11277f58268310016647eb9e54c132ad8f698f98ca600d0dd0a
+
+lalit@lalit:~$ docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED         STATUS         PORTS     NAMES
+c256c6f43920   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"   2 minutes ago   Up 2 minutes             agitated_pike
+
+
+## Entering inside the container and checking the secret message
+lalit@lalit:~$ docker exec -it agitated_pike sh -c 'tail -f ./text.log'
+2021-10-20 16:30:52 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-10-20 16:30:54 +0000 UTC
+2021-10-20 16:30:56 +0000 UTC
+2021-10-20 16:30:58 +0000 UTC
+2021-10-20 16:31:00 +0000 UTC
+2021-10-20 16:31:02 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+
