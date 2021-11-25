@@ -1,0 +1,23 @@
+#create a file to bind
+lalit@lalit:~/hy_devopswithdocker/part1/ex1.9$ touch log.txt
+# main command
+lalit@lalit:~/hy_devopswithdocker/part1/ex1.9$ docker run -v $(pwd)/log.txt:/usr/src/app/text.log devopsdockeruh/simple-web-service
+Starting log output
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+
+lalit@lalit:~/hy_devopswithdocker/part1/ex1.9$ cat log.txt 
+2021-11-25 18:32:25 +0000 UTC
+2021-11-25 18:32:27 +0000 UTC
+2021-11-25 18:32:29 +0000 UTC
+2021-11-25 18:32:31 +0000 UTC
+2021-11-25 18:32:33 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-11-25 18:32:35 +0000 UTC
+2021-11-25 18:32:37 +0000 UTC
